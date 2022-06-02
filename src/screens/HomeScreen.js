@@ -1,13 +1,38 @@
 import React from 'react';
-import { Text, StyleSheet } from 'react-native';
+import { Text, StyleSheet, View, Button, TouchableOpacity } from 'react-native';
 
-const HomeScreen = () => {
-  return <Text style={styles.text}>Vento</Text>;
+const HomeScreen = ({ navigation }) => {
+
+  return (
+    <View>
+      <Text style={styles.text}>Vento</Text>
+      <Button 
+        title="Component Screen"
+        onPress={() => navigation.navigate("Comp")}
+      />
+      <Button 
+        title="List Screen"
+        onPress={() => navigation.navigate("List")}
+      />
+      <Button
+        title="Image Block"
+        onPress={() => navigation.navigate("ImgStk")}
+      />
+      <Button
+        title="Counter"
+        onPress={() => navigation.navigate("CountZ")}
+      />
+      <Button
+        title="Colors"
+        onPress={() => navigation.navigate("ClButt")}
+      />
+    </View>
+  )
 };
 
 const styles = StyleSheet.create({
   text: {
-    fontSize: 48,
+    fontSize: 24,
     color: 'black',
     textAlign: 'center',
     fontWeight: 'bold',
